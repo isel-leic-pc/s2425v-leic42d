@@ -6,6 +6,7 @@ import java.io.BufferedWriter
 import java.io.InputStreamReader
 import java.io.OutputStreamWriter
 import java.net.InetAddress
+import java.net.InetSocketAddress
 import java.net.ServerSocket
 import java.net.Socket
 
@@ -42,15 +43,14 @@ class SimpleEchoServer(val port: Int) {
     }
 
     fun run() {
-        ServerSocket(port, BACKLOG, InetAddress.getByName("0.0.0.0") ).use {
-            serverSock ->
+        ServerSocket().use { serverSock ->
+            serverSock.bind(InetSocketAddress("0.0.0.0", port))
             logger.info("Waiting for client connections")
             while(true) {
                 val clientSock = serverSock.accept()
                 Thread {
                     processConnection(clientSock)
                 }.start()
-
             }
         }
     }
