@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/lecture-02-18-threads-intro" />
             <option value="$PROJECT_DIR$/lecture-02-18-threds-intro" />
             <option value="$PROJECT_DIR$/lecture-02-19-concurrency-intro" />
+            <option value="$PROJECT_DIR$/lecture-02-25-data-synchronization" />
           </set>
         </option>
       </GradleProjectSettings>
