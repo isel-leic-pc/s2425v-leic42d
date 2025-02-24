@@ -14,3 +14,4 @@ rootProject.name = "s2425v-leic42d"
 include("lecture-02-18-threds-intro")
 include("lecture-02-18-threads-intro")
 include("lecture-02-19-concurrency-intro")
+include("lab1")

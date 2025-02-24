@@ -109,6 +109,7 @@ class ThreadTests {
         logger.info("test terminated on thread ${Thread.currentThread().name}")
     }
 
+
     class MyThread : Thread() {
         val logger = KotlinLogging.logger {}
         override fun run() {
