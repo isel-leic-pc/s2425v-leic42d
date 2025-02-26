@@ -60,14 +60,14 @@ class SimpleEchoServerMT(private val port: Int) {
                 logger.info("waiting for client connections")
                 while (true) {
                     val clientSock = serverSocket.accept()
-                    val newClientId = ++clientId
+                    val localClientId = ++clientId
                     // on first version the code was the next commented line
                     // processClient(clientSock, ++clientId )
                     // bad choice, not thread safe, increments can be lost,
                     // resulting in duplicated ids for clients
                     // try the error, reverting to old version and execute EchoServerMTTest
                     Thread {
-                        processConnection(clientSock, newClientId)
+                        processConnection(clientSock, localClientId)
                     }.start()
                 }
             }
