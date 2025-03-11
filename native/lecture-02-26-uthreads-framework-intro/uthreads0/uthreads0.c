@@ -4,6 +4,8 @@
 
 #define STACK_SIZE 4000
 
+typedef void (*thread_func)(void);
+
 typedef struct {
     uint64_t r15;
     uint64_t r14;
@@ -11,15 +13,13 @@ typedef struct {
     uint64_t r12;
     uint64_t rbx;
     uint64_t rbp;
-    uint64_t ret;
+    thread_func ret;
 } context_t;
 
 typedef struct {
     context_t *context;
     uint8_t stack[STACK_SIZE];
 } thread_t;
-
-typedef void (*thread_func)(void);
 
 void context_switch(thread_t *from, thread_t *to);
 
@@ -40,7 +40,7 @@ void func2() {
 void thread_init(thread_t *thread, thread_func func) {
     context_t *ctx =  ((context_t*) (thread->stack + STACK_SIZE)) -1;
     ctx->rbp = 0;
-    ctx->ret = (uint64_t) func;
+    ctx->ret = func;
     // what was missed in the lecture!
     thread->context= ctx;
 }

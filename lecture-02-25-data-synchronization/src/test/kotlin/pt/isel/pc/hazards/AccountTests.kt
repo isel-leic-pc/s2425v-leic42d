@@ -10,6 +10,9 @@ class AccountTests {
     private val TRANSFER_VALUE = 100
     private val NACCOUNTS = 50
 
+    /**
+     *
+     */
     private fun multipleTransfersBetweenAccounts(accounts: Array<Account>,
                                                  transferOp : (src:Account, dst:Account) -> Unit) {
         require(accounts.size % 2 == 0)
@@ -63,6 +66,7 @@ class AccountTests {
     }
 
     @Test
+
     fun `multiple thread account access using shared lock synchronization`() {
         doTest("transferTo1") {
                 src, dst -> src.transferTo1(dst, TRANSFER_VALUE)

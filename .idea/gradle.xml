@@ -9,10 +9,13 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/lab1" />
+            <option value="$PROJECT_DIR$/lab2" />
             <option value="$PROJECT_DIR$/lecture-02-18-threads-intro" />
             <option value="$PROJECT_DIR$/lecture-02-18-threds-intro" />
             <option value="$PROJECT_DIR$/lecture-02-19-concurrency-intro" />
             <option value="$PROJECT_DIR$/lecture-02-25-data-synchronization" />
+            <option value="$PROJECT_DIR$/lecture-03-05-control-synchronization-intro" />
+            <option value="$PROJECT_DIR$/lecture-03-11-control-synchronization" />
           </set>
         </option>
       </GradleProjectSettings>
