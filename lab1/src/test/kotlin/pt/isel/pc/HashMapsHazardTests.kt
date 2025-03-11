@@ -73,6 +73,19 @@ class HashMapsHazardTests {
     }
 
     @Test
+    fun countWithBasicMapWithComputeIfAbsentTest() {
+        val basic = HashMap<Int, AtomicInteger>()
+
+        val millis = parallelMapFiller { key ->
+            basic.computeIfAbsent(key) { value -> AtomicInteger() }
+            .incrementAndGet()
+        }
+        logger.info ("basic hashMap fill done in $millis ms!")
+        Assertions.assertEquals(N_THREADS * N_KEYS, hashSumValues(basic))
+    }
+
+
+    @Test
     fun countWithSynchronizedMapTest() {
         val synchMap: MutableMap<Int, AtomicInteger> =
             Collections.synchronizedMap(HashMap())

@@ -2,6 +2,7 @@ package pt.isel.pc.echoservers
 
 import mu.KotlinLogging
 import java.io.*
+import java.lang.Thread.sleep
 import java.net.InetSocketAddress
 import java.net.ServerSocket
 import java.net.Socket
@@ -69,10 +70,12 @@ class SimpleEchoServerMT_Lim(val port: Int) {
                      */
                     if (currSessions.get() >= MAX_CLIENTS) {
                         logger.info("run: waiting for a client to finish")
+                        Thread.sleep(100)
                         continue
                     }
-                    currSessions.incrementAndGet()
+
                     val clientSocket = serverSocket.accept()
+                    currSessions.incrementAndGet()
                     val newClientId = clientId++
                     Thread {
                         try {

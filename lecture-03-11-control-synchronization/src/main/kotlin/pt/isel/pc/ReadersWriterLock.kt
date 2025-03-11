@@ -15,7 +15,7 @@ import kotlin.concurrent.withLock
  * readers/writers lock with different semantics with
  * the same difficulty level
  */
-class ReadersWritersLock {
+class ReadersWriterLock {
     private var nReaders = 0
     private val readersLock = ReentrantLock()
     private val canAccess = Semaphore(1)

@@ -52,18 +52,23 @@ class SimpleEchoServerMT_Lim(val port: Int) {
 
     fun run() {
         logger.info("Waiting for connections...")
-
+        val sessionsAvailable = Semaphore(MAX_CLIENTS)
         try {
             serverSocket.bind(InetSocketAddress("0.0.0.0", port), BACKLOG)
 
             serverSocket.use {
                 var clientId = 1
                 while (true) {
-
+                    sessionsAvailable.acquire()
                     val clientSocket = serverSocket.accept()
                     val newClientId = clientId++
                     Thread {
-                        processConnection(clientSocket, newClientId)
+                        try {
+                            processConnection(clientSocket, newClientId)
+                        }
+                        finally {
+                            sessionsAvailable.release()
+                        }
                     }.start()
                 }
             }
