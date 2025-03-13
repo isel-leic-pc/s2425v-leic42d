@@ -16,6 +16,7 @@
             <option value="$PROJECT_DIR$/lecture-02-25-data-synchronization" />
             <option value="$PROJECT_DIR$/lecture-03-05-control-synchronization-intro" />
             <option value="$PROJECT_DIR$/lecture-03-11-control-synchronization" />
+            <option value="$PROJECT_DIR$/lecture-03-12-monitors-intro" />
           </set>
         </option>
       </GradleProjectSettings>
