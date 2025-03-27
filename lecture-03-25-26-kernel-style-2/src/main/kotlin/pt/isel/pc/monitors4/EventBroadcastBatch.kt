@@ -56,7 +56,7 @@ class EventBroadcastBatch(private var signaled : Boolean = false) {
             signaled = true
 
             // the "set" operation is responsible
-            // to inform all waiters that those operations are concluded
+            // to inform all waiters that their operations are concluded.
             // In this version, just setting the current batch done flag and
             // and creating a new batch for the next round
             current.done = true
