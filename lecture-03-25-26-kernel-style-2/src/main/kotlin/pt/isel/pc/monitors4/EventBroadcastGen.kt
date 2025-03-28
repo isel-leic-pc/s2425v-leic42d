@@ -4,19 +4,20 @@ import java.util.concurrent.locks.ReentrantLock
 import kotlin.concurrent.withLock
 import kotlin.time.Duration
 
+/**
+ * Here we use a simpler approach to the Batch object use in EventBroadcastBatch
+ * alternative. This is based on the concept of notification generation, and use
+ * a simple integer to define that generation.
+ * Note that this is only possible when the notification
+ * is not associated to data that must be send to the waiters.
+ * If this is the case, a Batch object must be used to include
+ * the necessary data send to batch waiters
+ */
 class EventBroadcastGen(private var signaled : Boolean = false) {
-    // thw waiter node
-    class Batch {
-        internal var done = false
-    }
-
     private val monitor = ReentrantLock()
     private val signalEvent = monitor.newCondition()
 
-    // the waiter batch
-    private var current = Batch()
     private var generation = 0
-
 
     fun await(timeout : Duration = Duration.INFINITE) : Boolean {
         monitor.withLock {
@@ -60,7 +61,6 @@ class EventBroadcastGen(private var signaled : Boolean = false) {
             // in this version this sis done just by increase the generation
 
             generation++
-
             signalEvent.signalAll()
         }
     }

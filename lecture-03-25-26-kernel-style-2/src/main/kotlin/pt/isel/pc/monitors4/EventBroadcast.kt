@@ -7,12 +7,12 @@ import kotlin.math.sign
 import kotlin.time.Duration
 
 /**
- * This alternative (for EventBroadcast0) solves the problem found there
- * using a "kernel style" approach, that guarantees that all  threads awaked
- * by "set" operation will not block again due to barging
+ * This alternative (for EventBroadcast0) solves the problem found there,
+ * using a "kernel style" approach, that guarantees that all  threads awaken
+ * by "set" operation will not block again due to barging.
  */
 class EventBroadcast(private var signaled : Boolean = false) {
-    // thw waiter node
+    // the waiter node
     class Waiter {
         internal var done = false
     }
@@ -22,7 +22,6 @@ class EventBroadcast(private var signaled : Boolean = false) {
 
     // the waiter list
     private val waiters = LinkedList<Waiter>()
-
 
     fun await(timeout : Duration = Duration.INFINITE) : Boolean {
         monitor.withLock {

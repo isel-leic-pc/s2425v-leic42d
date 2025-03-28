@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66a1b54b-5706-4cf4-971a-7343c6df2309" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/NArySemaphoreFairSN.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-25-kernel-style-2/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-25-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcast.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcast.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-25-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcast0.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcast0.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-25-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastBatch.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastBatch.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-25-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastGen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastGen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-25-kernel-style-2/src/test/kotlin/pt/isel/pc/monitors4/MonitorsTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/test/kotlin/pt/isel/pc/monitors4/MonitorsTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcast.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcast.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastBatch.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastBatch.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastGen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastGen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +59,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/home/disciplinas/PC/2s2024-2025/src/s2425v-leic42d",
+    "last_opened_file_path": "C:/home/disciplinas/PC/2s2024-2025/src/staging",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -173,6 +165,7 @@
       <workItem from="1743008840304" duration="1697000" />
       <workItem from="1743064703190" duration="376000" />
       <workItem from="1743065139480" duration="2255000" />
+      <workItem from="1743158206420" duration="1606000" />
     </task>
     <servers />
   </component>

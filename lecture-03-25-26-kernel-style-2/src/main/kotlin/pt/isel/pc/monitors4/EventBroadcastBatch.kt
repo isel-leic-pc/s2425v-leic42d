@@ -6,7 +6,7 @@ import kotlin.concurrent.withLock
 import kotlin.time.Duration
 
 class EventBroadcastBatch(private var signaled : Boolean = false) {
-    // thw waiter node
+    // the waiter node
     class Batch {
         internal var done = false
     }
