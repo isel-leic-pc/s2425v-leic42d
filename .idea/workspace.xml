@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66a1b54b-5706-4cf4-971a-7343c6df2309" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcast.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcast.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastBatch.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastBatch.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastGen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/EventBroadcastGen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,13 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -49,38 +55,40 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build s2425v-leic42d.executor": "Run",
-    "Gradle.MonitorsTests.lots of insane releases and acquires test.executor": "Run",
-    "Gradle.MonitorsTests.testFairSemaphore.executor": "Run",
-    "Kotlin.EchoServerScopedKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/home/disciplinas/PC/2s2024-2025/src/staging",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build s2425v-leic42d.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MonitorsTests.lots of insane releases and acquires test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MonitorsTests.testFairSemaphore.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.EchoServerScopedKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/home/disciplinas/PC/2s2024-2025/src/s2425v-leic42d&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-04-01-broadcast-server-intro\src\main\kotlin\pt\isel\pc" />
       <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-03-25-26-kernel-style-2\src\main\kotlin\pt\isel\pc\echoservers4" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="pt.isel.pc" />
       <recent name="pt.isel.pc.echoservers4" />
       <recent name="pt.isel.pc.monitors4" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MonitorsTests.lots of insane releases and acquires test">
+  <component name="RunManager" selected="Kotlin.EchoServerScopedKt">
     <configuration name="MonitorsTests.lots of insane releases and acquires test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -129,6 +137,13 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="EchoServerScopedKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.EchoServerScopedKt" />
+      <module name="s2425v-leic42d.lecture-04-01-broadcast-server-intro.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,6 +155,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.EchoServerScopedKt" />
         <item itemvalue="Gradle.MonitorsTests.lots of insane releases and acquires test" />
         <item itemvalue="Gradle.MonitorsTests.testFairSemaphore" />
       </list>
@@ -165,11 +181,25 @@
       <workItem from="1743008840304" duration="1697000" />
       <workItem from="1743064703190" duration="376000" />
       <workItem from="1743065139480" duration="2255000" />
-      <workItem from="1743158206420" duration="1606000" />
+      <workItem from="1743158206420" duration="1752000" />
+      <workItem from="1743503324296" duration="5394000" />
+      <workItem from="1743520833370" duration="2439000" />
+      <workItem from="1743523360301" duration="150000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/lecture-04-01-broadcast-server-intro/src/main/kotlin/pt/isel/pc/EchoServerScoped.kt</url>
+          <line>84</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
