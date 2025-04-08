@@ -22,6 +22,7 @@
             <option value="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2" />
             <option value="$PROJECT_DIR$/lecture-04-01-broadcast-server-intro" />
             <option value="$PROJECT_DIR$/lecture-04-02-memory-model-and-async-intro" />
+            <option value="$PROJECT_DIR$/lecture-04-08-async-programming-without-threads-intro" />
           </set>
         </option>
       </GradleProjectSettings>

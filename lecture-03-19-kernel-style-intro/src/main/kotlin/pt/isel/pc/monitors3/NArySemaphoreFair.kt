@@ -42,7 +42,7 @@ class NArySemaphoreFair(private var permits : Int = 0) {
      */
     private fun tryResolvePendingAcquires() {
         var count = 0
-        while(waiters.size > 0 && waiters.first.units <= permits) {
+        while(waiters.size > 0 && waiters.first().units <= permits) {
             val waiter = waiters.removeFirst()
             waiter.done = true
             count++
