@@ -1,14 +1,5 @@
 import * as net from "net";
 
-function createConnection(socket) {
-    return {
-        socket : socket,
-        pending : null,
-        error : false,
-        ended : false
-    }
-}
-
 function sockWrite(connection, data)  {
     const promise =  new Promise( (resolve, reject) => {
         if (connection.error) {
@@ -56,19 +47,16 @@ function processConnection(connection) {
     });
 }
 
-function newConnection(socket ) {
+function newConnection0(socket ) {
     console.log('new connection', socket.remoteAddress, socket.remotePort);
-
-    const connection = sockInit(socket);
-
+    const connection = createConnection(socket);
     processConnection(connection)
-
 }
 
-async function newConnection0(socket ) {
+async function newConnection(socket ) {
     console.log('new connection', socket.remoteAddress, socket.remotePort);
     try {
-        const connection = sockInit(socket);
+        const connection = createConnection(socket);
         while (true) {
             const data = await sockRead(connection);
             console.log('data: ', data.toString());
@@ -92,10 +80,14 @@ async function newConnection0(socket ) {
     }
 }
 
-function sockInit(socket) {
-    const connection = createConnection(socket)
+function createConnection(socket) {
+    const connection = {
+        socket: socket,
+        reader: null,
+        error: false,
+        ended: false
+    }
     console.log('new connection', socket.remoteAddress, socket.remotePort);
-
 
     socket.on('end', () => {
         // this also fulfills the current read.
@@ -111,7 +103,6 @@ function sockInit(socket) {
         connection.socket.pause()
         connection.reader.resolve(data)
         connection.reader = null
-
     });
     socket.on('error', (error) => {
         // errors are also delivered to the current read.
@@ -128,4 +119,4 @@ function sockInit(socket) {
 let server = net.createServer({pauseOnConnect : true});
 server.on('error', (err) => { console.log("error: ", err); });
 server.on('connection', newConnection);
-server.listen({host: '0.0.0.0', port: 1234});
+server.listen({host: '0.0.0.0', port: 8080});

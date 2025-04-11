@@ -30,7 +30,7 @@ private suspend fun delay2(millis: Long) {
 
 private suspend fun  fs(msg: String, millis: Long) : Long {
     logger.info("start fs with $msg")
-    //delay2(millis)
+    delay2(millis)
     logger.info("end fs")
     return 23L
 }
@@ -55,18 +55,21 @@ fun fsAsNormal() {
 }
 
 private fun main() {
+    
     val code : suspend () -> Unit = {
         fsAsNormal()
     }
     
-    val res = code.startCoroutine( object : Continuation<Unit> {
+    val completion = object: Continuation<Unit> {
         override val context: CoroutineContext
             get() = EmptyCoroutineContext
         
         override fun resumeWith(result: Result<Unit>) {
             logger.info("result = $result")
         }
-    })
+    }
+    
+    code.startCoroutine(completion)
     
     logger.info("terminate")
 }

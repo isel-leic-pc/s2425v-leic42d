@@ -94,7 +94,11 @@ class CompletableFuturesTests {
 
     @Test
     fun `invoke some async operation on future completion`() {
-        TODO()
+        val f1 =  oper1Async(1)
+        
+        val fs   = f1.thenCompose { n ->
+            oper2Async(n)
+        }
        
     }
 
