@@ -3,15 +3,19 @@ package pt.isel.pc.coroutines0
 import mu.KotlinLogging
 import org.junit.jupiter.api.Test
 import java.lang.Thread.sleep
+import java.lang.Thread.startVirtualThread
 import java.util.concurrent.Executors
 import java.util.concurrent.TimeUnit
 import kotlin.coroutines.*
 
 private val logger = KotlinLogging.logger {}
+private val scheduler = Executors.newSingleThreadScheduledExecutor()
 
 suspend fun myDelay(millis: Long) {
     suspendCoroutine<Unit> { cont ->
-    
+        scheduler.schedule({
+            cont.resume(Unit)
+        },millis, TimeUnit.MILLISECONDS);
     }
 }
 
@@ -84,6 +88,7 @@ class CoroutinesBuiltinTests {
                 suspendCoroutine<Unit> {
                     cont -> continuations.addLast(cont)
                 }
+                println("after suspend in $t")
             }
         }
         
@@ -95,6 +100,7 @@ class CoroutinesBuiltinTests {
                 suspendCoroutine<Unit> {
                         cont -> continuations.addLast(cont)
                 }
+                println("after suspend in $c")
             }
         }
         
@@ -105,6 +111,60 @@ class CoroutinesBuiltinTests {
         while(continuations.isNotEmpty()) {
             continuations.removeFirst().resumeWith(Result.success(Unit))
         }
+        
+        logger.info("done")
+    }
+    
+    suspend fun f3() {
+        logger.info("f3 start");
+        myDelay(2000);
+        logger.info("f3 end");
+    }
+    
+    suspend fun f2() {
+        logger.info("f2 start");
+        f3();
+        logger.info("f2 end");
+    }
+    
+    suspend fun f1() {
+        logger.info("f1 start");
+        f2();
+        logger.info("f1 end");
+    }
+    
+    @Test
+    fun `deep suspension point test`() {
+        
+        val continuations = mutableListOf<Continuation<Unit>>()
+        
+        val completion = object : Continuation<Unit> {
+            override val context: CoroutineContext
+                get() = EmptyCoroutineContext
+            
+            override fun resumeWith(result: Result<Unit>) {
+                logger.info("result = $result")
+            }
+        }
+        
+        var f0 : suspend () -> Unit = {
+            logger.info("f0 start");
+            f1();
+            logger.info("f0 end");
+        }
+        
+        
+        logger.info("create first coroutine");
+        val startCompletion1 = f0.createCoroutine(completion)
+        
+        logger.info("create second coroutine");
+        val startCompletion2 = f0.createCoroutine(completion)
+       
+        startCompletion1.resume(Unit)
+        logger.info("first coroutine started");
+        startCompletion2.resume(Unit)
+        logger.info("second coroutine started");
+        sleep(5000)
         
         logger.info("done")
     }
