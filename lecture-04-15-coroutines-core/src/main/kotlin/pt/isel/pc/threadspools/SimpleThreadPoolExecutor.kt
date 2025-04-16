@@ -75,7 +75,6 @@ class SimpleThreadPoolExecutor(
         }
     }
     
-    
     @Throws(RejectedExecutionException::class)
     fun execute(task: Runnable): Unit {
         mutex.withLock {

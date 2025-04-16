@@ -90,20 +90,20 @@ class CoroutinesBuiltinTests {
     fun `function with many suspension points`() {
         //cdl used to avoid premature test termination
         val cdl = CountDownLatch(1)
-        val completion = object : Continuation<Long> {
+        val completion = object : Continuation<Any> {
             override val context: CoroutineContext
-                get() = EmptyCoroutineContext
+                get() =  CoroutineName("coroutine 1")
                
             
-            override fun resumeWith(result: Result<Long>) {
+            override fun resumeWith(result: Result<Any>) {
                 logger.info("result = $result")
                 cdl.countDown()
             }
         }
-        val res = ::func1.startCoroutine(completion)
+        ::func1.startCoroutine(completion)
         
         cdl.await()
-        logger.info("test done with res = $res")
+        logger.info("test done")
     }
     
     @Test

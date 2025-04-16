@@ -20,12 +20,13 @@ class ThreadPoolExecutorTests {
     fun `await threadpool termination blocking and suspend`()  {
         val executor = ThreadPoolExecutor(1, 1.minutes)
         val cdl = CountDownLatch(1)
-        
-        executor.execute {
-            logger.info("Hello from runnable")
+        // here we are using a Continuation constructor function to avoid
+        // implement the Continuation interface
+        val cont =  Continuation<Unit>(EmptyCoroutineContext) {
+            println("done")
             cdl.countDown()
         }
-        
+        executor.execute(cont)
         
         cdl.await(1000, TimeUnit.MILLISECONDS)
         
@@ -39,8 +40,7 @@ class ThreadPoolExecutorTests {
         }
       
         val testThread = Thread {
-            suspend { executor.awaitTerminationSuspend()}
-                .startCoroutine(completion)
+           
             executor.awaitTermination(Duration.INFINITE)
         }
         testThread.start()
