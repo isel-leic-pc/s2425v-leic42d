@@ -94,7 +94,7 @@ class SimpleThreadPoolExecutor(
                 poolSize++
                 Thread {
                     workerLoop(Worker(mutex.newCondition(), task))
-                }
+                }.start()
             }
             else {
                 requestQueue.add(task)
