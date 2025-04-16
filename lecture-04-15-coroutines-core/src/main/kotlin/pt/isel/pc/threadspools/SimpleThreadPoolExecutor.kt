@@ -14,7 +14,7 @@ class SimpleThreadPoolExecutor(
     private val keepAliveTime: Duration) {
     
     // node class for waiting workers list
-    private inner class Waiter(val hasWork: Condition, var code: Runnable? ) {}
+    private class Waiter(val hasWork: Condition, var code: Runnable? ) {}
     
     // the state of the ThreadPool. Use it
     // on shutdown protocol, not done here
@@ -42,6 +42,9 @@ class SimpleThreadPoolExecutor(
         }
     }
     
+    private fun workerTermination() {
+        poolSize--
+    }
     /**
      * private function that contains the worker thread loop
      * to retrieve and process submitted runnables
@@ -61,6 +64,7 @@ class SimpleThreadPoolExecutor(
                         if (remaining <= 0) {
                             // terminated due to inactivity
                             waitingThreads.remove(waiter)
+                            workerTermination()
                             return
                         }
                         remaining = waiter.hasWork.awaitNanos(remaining)
