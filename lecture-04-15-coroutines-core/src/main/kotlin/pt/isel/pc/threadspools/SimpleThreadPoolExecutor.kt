@@ -14,7 +14,7 @@ class SimpleThreadPoolExecutor(
     private val keepAliveTime: Duration) {
     
     // node class for waiting workers list
-    private class Waiter(val hasWork: Condition, var code: Runnable? ) {}
+    private class Worker(val hasWork: Condition, var code: Runnable? ) {}
     
     // the state of the ThreadPool. Use it
     // on shutdown protocol, not done here
@@ -25,16 +25,16 @@ class SimpleThreadPoolExecutor(
     private val mutex = ReentrantLock()
  
     private val requestQueue = LinkedList<Runnable>()
-    private val waitingThreads = LinkedList<Waiter>()
+    private val waitingThreads = LinkedList<Worker>()
     
     /**
-     * Execute the runnable in a safe way, avois worker thread
+     * Execute the runnable in a safe way, avoiding worker thread
      * abnormal termination
      */
-    private fun safeExec(waiter : Waiter) {
+    private fun safeExec(worker : Worker) {
         try {
-            waiter.code?.run()
-            waiter.code = null
+            worker.code?.run()
+            worker.code = null
         }
         catch(e: Exception) {
             // just swallow the exception
@@ -42,33 +42,37 @@ class SimpleThreadPoolExecutor(
         }
     }
     
+    /*
+     * here should be inserted all the necessary worker termination code
+     */
     private fun workerTermination() {
         poolSize--
     }
+    
     /**
-     * private function that contains the worker thread loop
+     * private function that contains the worker thread loop, used
      * to retrieve and process submitted runnables
      */
-    private fun workerLoop( waiter: Waiter ) {
+    private fun workerLoop(worker: Worker ) {
         while (true) {
-            safeExec(waiter)
+            safeExec(worker)
             mutex.withLock {
                 // fast path
                 if (requestQueue.isNotEmpty()) {
-                    waiter.code = requestQueue.removeFirst()
+                    worker.code = requestQueue.removeFirst()
                 } else {
                     var remaining = keepAliveTime.inWholeNanoseconds
                     // waiting path
-                    waitingThreads.add(waiter)
+                    waitingThreads.add(worker)
                     while (true) {
                         if (remaining <= 0) {
                             // terminated due to inactivity
-                            waitingThreads.remove(waiter)
+                            waitingThreads.remove(worker)
                             workerTermination()
                             return
                         }
-                        remaining = waiter.hasWork.awaitNanos(remaining)
-                        if (waiter.code != null) break;
+                        remaining = worker.hasWork.awaitNanos(remaining)
+                        if (worker.code != null) break;
                     }
                 }
             }
@@ -80,8 +84,8 @@ class SimpleThreadPoolExecutor(
         mutex.withLock {
             if (poolState !== PoolState.ACTIVE) throw RejectedExecutionException()
             
-            // kernel style thread notification
             if (waitingThreads.isNotEmpty()) {
+                // kernel style thread notification
                 val waiter = waitingThreads.removeFirst()
                 waiter.code = task
                 waiter.hasWork.signal()
@@ -89,7 +93,7 @@ class SimpleThreadPoolExecutor(
             else if (poolSize < maxThreadPoolSize) {
                 poolSize++
                 Thread {
-                    workerLoop(Waiter(mutex.newCondition(), task))
+                    workerLoop(Worker(mutex.newCondition(), task))
                 }
             }
             else {
@@ -97,7 +101,4 @@ class SimpleThreadPoolExecutor(
             }
         }
     }
-    
-    
-    
 }

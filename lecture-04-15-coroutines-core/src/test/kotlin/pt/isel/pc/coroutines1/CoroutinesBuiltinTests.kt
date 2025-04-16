@@ -7,7 +7,10 @@ import java.util.concurrent.CountDownLatch
 import kotlin.coroutines.*
 
 class CoroutinesBuiltinTests {
-    private val logger = KotlinLogging.logger {}
+    companion object {
+        private val logger = KotlinLogging.logger {}
+    }
+   
     
     // a suspend funtion no reaaly needes to be suspend
     // just to observe the compled signature
@@ -68,7 +71,7 @@ class CoroutinesBuiltinTests {
         // use the coroutineContext to retrieve the given coroutine name
         val name = coroutineContext.get(CoroutineName)?.name
         logger.info("phase 1 on $name");
-//  a bas implementation of delay
+//  a bad implementation of delay
 //        suspendCoroutine<Long> {
 //            cont ->
 //             Thread {
@@ -93,14 +96,15 @@ class CoroutinesBuiltinTests {
         val completion = object : Continuation<Any> {
             override val context: CoroutineContext
                 get() =  CoroutineName("coroutine 1")
-               
             
             override fun resumeWith(result: Result<Any>) {
                 logger.info("result = $result")
                 cdl.countDown()
             }
         }
-        ::func1.startCoroutine(completion)
+        suspend {
+            func1()
+        }.startCoroutine(completion)
         
         cdl.await()
         logger.info("test done")
