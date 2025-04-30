@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="181c17fc-afcb-4e1e-bf07-db2f98c623b5" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lecture-04-29-more-about-coroutines/src/main/kotlin/pt/isel/pc/coroutines1/ThreadPoolExecutor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecture-04-29-more-about-coroutines/src/main/kotlin/pt/isel/pc/coroutines1/cps/deepSuspend.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lecture-04-29-more-about-coroutines/src/main/kotlin/pt/isel/pc/coroutines1/utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/main/kotlin/pt/isel/pc/coroutines1/cps/deepSuspend.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/main/kotlin/pt/isel/pc/coroutines1/cps/deepSuspend.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/main/kotlin/pt/isel/pc/coroutines1/cps/suspendAsNormal.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/main/kotlin/pt/isel/pc/coroutines1/utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/main/kotlin/pt/isel/pc/coroutines1/utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/test/kotlin/pt/isel/pc/coroutines1/CoroutinesBuiltinTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/test/kotlin/pt/isel/pc/coroutines1/CoroutinesBuiltinTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/test/kotlin/pt/isel/pc/coroutines1/ThreadPoolExecutorTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/test/kotlin/pt/isel/pc/coroutines1/ThreadPoolExecutorTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jmartins3"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/isel-leic-pc/s2425v-leic42d.git",
+    "accountId": "84ffe75d-0552-4ba7-bf9a-76fbc15af82d"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2wSHn6IDnUSjgYI04r7OfLuGPuM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build s2425v-leic42d.executor": "Run",
+    "Kotlin.DeepSuspendKt.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/home/disciplinas/PC/2s2024-2025/src/s2425v-leic42d/lecture-04-29-more-about-coroutines/src/test/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-04-29-more-about-coroutines\src\test\resources" />
+      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-04-29-more-about-coroutines\src\test\kotlin\pt\isel\pc" />
+      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-04-29-more-about-coroutines\src\main\kotlin\pt\isel\pc" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DeepSuspendKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.coroutines1.cps.DeepSuspendKt" />
+      <module name="s2425v-leic42d.lecture-04-29-more-about-coroutines.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="s2425v-leic42d" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="s2425v-leic42d" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.DeepSuspendKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="181c17fc-afcb-4e1e-bf07-db2f98c623b5" name="Changes" comment="" />
+      <created>1746028219589</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746028219589</updated>
+      <workItem from="1746028222183" duration="407000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

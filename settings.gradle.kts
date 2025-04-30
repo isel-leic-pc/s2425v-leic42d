@@ -28,3 +28,5 @@ include("lecture-04-01-broadcast-server-intro")
 include("lecture-04-02-memory-model-and-async-intro")
 include("lecture-04-08-09-async-programming-without-threads-intro")
 include("lecture-04-15-coroutines-core")
+
+include("lecture-04-29-more-about-coroutines")
