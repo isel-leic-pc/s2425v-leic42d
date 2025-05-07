@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f162eeb9-3685-435e-8495-ba34b14c2646" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/NArySemaphoreFairSN.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/NArySemaphoreFairSN.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/test/kotlin/pt/isel/pc/coroutines1/CoroutinesBuiltinTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/test/kotlin/pt/isel/pc/coroutines1/CoroutinesBuiltinTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-06-asynchronizers/src/main/kotlin/pt/isel/pc/asynchronizers/SemaphoreCR.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-06-asynchronizers/src/main/kotlin/pt/isel/pc/asynchronizers/SemaphoreCR.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-06-asynchronizers/src/main/kotlin/pt/isel/pc/asynchronizers/SemaphoreCR2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-06-asynchronizers/src/main/kotlin/pt/isel/pc/asynchronizers/SemaphoreCR2.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,32 +69,32 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build s2425v-leic42d.executor": "Run",
-    "Kotlin.CopyFileSMKt.executor": "Run",
-    "Kotlin.EchoServerAsyncKt.executor": "Run",
-    "Kotlin.EchoServerCRKt.executor": "Run",
-    "Kotlin.FileUtilsKt.executor": "Run",
-    "Kotlin.Http_state_machineKt.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/home/disciplinas/PC/2s2024-2025/src/s2425v-leic42d/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.12298851",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build s2425v-leic42d.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.CopyFileSMKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.EchoServerAsyncKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.EchoServerCRKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.FileUtilsKt.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.Http_state_machineKt.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/home/disciplinas/PC/2s2024-2025/src/s2425v-leic42d/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.12298851&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-05-07-asyncio-nio\src\main\kotlin\pt\isel\pc\nio" />
@@ -169,6 +166,7 @@
       <updated>1746611604665</updated>
       <workItem from="1746611605890" duration="5792000" />
       <workItem from="1746629626263" duration="3335000" />
+      <workItem from="1746634258357" duration="81000" />
     </task>
     <servers />
   </component>

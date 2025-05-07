@@ -59,8 +59,8 @@ class SemaphoreCR2(initialUnits : Int) {
     }
     
     /**
-     * Note that here we have to conver release operation
-     * to a suspend one in order to permite the use of kotlin mutex
+     * Note that here we have to convert the release operation
+     * to a suspend one, in order to support the use of kotlin mutex
      * For all these constraints I always ReentrantLock in this scenario
      */
     suspend fun release(units: Int) {

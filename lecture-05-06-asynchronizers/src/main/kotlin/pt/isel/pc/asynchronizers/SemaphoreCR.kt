@@ -25,13 +25,15 @@ class SemaphoreCR(initialUnits : Int) {
     suspend fun acquire(units: Int) {
         suspendCoroutine<Unit> {
             cont ->
-            // try fast path
+           
             lock.withLock {
+                // try fast path
                 if (units <= permits) {
                     permits -= units
                     cont.resume(Unit)
                 }
                 else {
+                    // suspend path
                     requests.add(Request(units, cont))
                 }
             }
@@ -39,8 +41,6 @@ class SemaphoreCR(initialUnits : Int) {
 
     }
     
-    
-
     private fun tryResolveRequests() : List<Request> {
         val resolved = mutableListOf<Request>()
         while(requests.isNotEmpty() &&
