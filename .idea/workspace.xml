@@ -4,19 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="181c17fc-afcb-4e1e-bf07-db2f98c623b5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lecture-04-29-more-about-coroutines/src/main/kotlin/pt/isel/pc/coroutines1/ThreadPoolExecutor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lecture-04-29-more-about-coroutines/src/main/kotlin/pt/isel/pc/coroutines1/cps/deepSuspend.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lecture-04-29-more-about-coroutines/src/main/kotlin/pt/isel/pc/coroutines1/utils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+    <list default="true" id="f162eeb9-3685-435e-8495-ba34b14c2646" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/main/kotlin/pt/isel/pc/coroutines1/cps/deepSuspend.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/main/kotlin/pt/isel/pc/coroutines1/cps/deepSuspend.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/main/kotlin/pt/isel/pc/coroutines1/cps/suspendAsNormal.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/main/kotlin/pt/isel/pc/coroutines1/utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/main/kotlin/pt/isel/pc/coroutines1/utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/NArySemaphoreFairSN.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-03-25-26-kernel-style-2/src/main/kotlin/pt/isel/pc/monitors4/NArySemaphoreFairSN.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/test/kotlin/pt/isel/pc/coroutines1/CoroutinesBuiltinTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/test/kotlin/pt/isel/pc/coroutines1/CoroutinesBuiltinTests.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/test/kotlin/pt/isel/pc/coroutines1/ThreadPoolExecutorTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-04-15-coroutines-core/src/test/kotlin/pt/isel/pc/coroutines1/ThreadPoolExecutorTests.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,26 +22,50 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="s2425v-leic42d" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jmartins3"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jmartins3&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/isel-leic-pc/s2425v-leic42d.git",
-    "accountId": "84ffe75d-0552-4ba7-bf9a-76fbc15af82d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/isel-leic-pc/s2425v-leic42d.git&quot;,
+    &quot;accountId&quot;: &quot;84ffe75d-0552-4ba7-bf9a-76fbc15af82d&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
-  <component name="ProjectId" id="2wSHn6IDnUSjgYI04r7OfLuGPuM" />
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2wlMFXlYBVIlDV75NHrJf3eCwEg" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -58,13 +75,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Gradle.Build s2425v-leic42d.executor": "Run",
-    "Kotlin.DeepSuspendKt.executor": "Run",
+    "Kotlin.CopyFileSMKt.executor": "Run",
+    "Kotlin.EchoServerAsyncKt.executor": "Run",
+    "Kotlin.EchoServerCRKt.executor": "Run",
+    "Kotlin.FileUtilsKt.executor": "Run",
+    "Kotlin.Http_state_machineKt.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/home/disciplinas/PC/2s2024-2025/src/s2425v-leic42d/lecture-04-29-more-about-coroutines/src/test/resources",
+    "last_opened_file_path": "C:/home/disciplinas/PC/2s2024-2025/src/s2425v-leic42d/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,39 +93,62 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.side.proportion": "0.12298851",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-04-29-more-about-coroutines\src\test\resources" />
-      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-04-29-more-about-coroutines\src\test\kotlin\pt\isel\pc" />
-      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-04-29-more-about-coroutines\src\main\kotlin\pt\isel\pc" />
+      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-05-07-asyncio-nio\src\main\kotlin\pt\isel\pc\nio" />
+    </key>
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="pt.isel.pc.nio.echo_servers" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="DeepSuspendKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.coroutines1.cps.DeepSuspendKt" />
-      <module name="s2425v-leic42d.lecture-04-29-more-about-coroutines.main" />
+  <component name="RunManager" selected="Kotlin.EchoServerCRKt">
+    <configuration name="CopyFileSMKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.nio.CopyFileSMKt" />
+      <module name="s2425v-leic42d.lecture-05-07-asyncio-nio.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="s2425v-leic42d" />
+    <configuration name="EchoServerAsyncKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.nio.echo_servers.EchoServerAsyncKt" />
+      <module name="s2425v-leic42d.lecture-05-07-asyncio-nio.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="s2425v-leic42d" />
-      <option name="filePath" />
-      <method v="2" />
+    <configuration name="EchoServerCRKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.nio.EchoServerCRKt" />
+      <module name="s2425v-leic42d.lecture-05-07-asyncio-nio.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileUtilsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.nio.FileUtilsKt" />
+      <module name="s2425v-leic42d.lecture-05-07-asyncio-nio.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Http_state_machineKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.nio.Http_state_machineKt" />
+      <module name="s2425v-leic42d.lecture-05-07-asyncio-nio.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.DeepSuspendKt" />
+        <item itemvalue="Kotlin.EchoServerCRKt" />
+        <item itemvalue="Kotlin.Http_state_machineKt" />
+        <item itemvalue="Kotlin.CopyFileSMKt" />
+        <item itemvalue="Kotlin.EchoServerAsyncKt" />
+        <item itemvalue="Kotlin.FileUtilsKt" />
       </list>
     </recent_temporary>
   </component>
@@ -118,16 +162,52 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="181c17fc-afcb-4e1e-bf07-db2f98c623b5" name="Changes" comment="" />
-      <created>1746028219589</created>
+      <changelist id="f162eeb9-3685-435e-8495-ba34b14c2646" name="Changes" comment="" />
+      <created>1746611604665</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1746028219589</updated>
-      <workItem from="1746028222183" duration="407000" />
+      <updated>1746611604665</updated>
+      <workItem from="1746611605890" duration="5792000" />
+      <workItem from="1746629626263" duration="3335000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt</url>
+          <line>31</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt</url>
+          <line>35</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt</url>
+          <line>21</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt</url>
+          <line>25</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-function">
+          <url>file://$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt</url>
+          <line>66</line>
+          <properties method="readLine">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

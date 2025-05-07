@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="graalvm-jdk-21" />
+        <option name="gradleHome" value="C:\gradle\gradle-8.5" />
+        <option name="gradleJvm" value="temurin-21" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -25,6 +27,8 @@
             <option value="$PROJECT_DIR$/lecture-04-08-09-async-programming-without-threads-intro" />
             <option value="$PROJECT_DIR$/lecture-04-15-coroutines-core" />
             <option value="$PROJECT_DIR$/lecture-04-29-more-about-coroutines" />
+            <option value="$PROJECT_DIR$/lecture-05-06-asynchronizers" />
+            <option value="$PROJECT_DIR$/lecture-05-07-asyncio-nio" />
           </set>
         </option>
       </GradleProjectSettings>

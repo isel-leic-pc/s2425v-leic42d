@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="s2425v-leic42d.lecture-05-06-asynchronizers.src.main.kotlin.pt.isel.pc.lecture-06-07-asyncio-nio" target="21" />
+      <module name="s2425v-leic42d.lecture-05-06-asynchronizers.src.main.kotlin.pt.isel.pc.lecture-06-07-asyncio-nio.main" target="21" />
+      <module name="s2425v-leic42d.lecture-05-06-asynchronizers.src.main.kotlin.pt.isel.pc.lecture-06-07-asyncio-nio.test" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

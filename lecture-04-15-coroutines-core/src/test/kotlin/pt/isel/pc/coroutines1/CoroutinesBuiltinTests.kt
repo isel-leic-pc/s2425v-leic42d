@@ -165,7 +165,7 @@ class CoroutinesBuiltinTests {
                 println(t)
                 
                 suspendCoroutine<Unit> {
-                    cont -> continuations.addLast(cont)
+                    cont -> continuations.addFirst(cont)
                 }
                 println("after suspend in $t")
             }
@@ -190,7 +190,7 @@ class CoroutinesBuiltinTests {
         while(continuations.isNotEmpty()) {
             continuations.removeFirst().resumeWith(Result.success(Unit))
         }
-        
+
         logger.info("done")
     }
     
