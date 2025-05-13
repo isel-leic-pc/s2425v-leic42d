@@ -126,8 +126,7 @@ class FileUtils {
 fun main() {
     val cdl = CountDownLatch(1)
     copyFileAsync("dud_en.txt", "dud_en_out.txt") {
-  
-            err, result ->
+        err, result ->
         logger.info("file copied with size $result")
         cdl.countDown()
         

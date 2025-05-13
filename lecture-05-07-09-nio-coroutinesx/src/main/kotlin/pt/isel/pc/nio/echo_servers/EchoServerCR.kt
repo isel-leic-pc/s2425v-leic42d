@@ -3,11 +3,13 @@
  * a suspend API to NIO2 socket channels
  */
 
-package pt.isel.pc.nio
+package pt.isel.pc.nio.echo_servers
 
 import mu.KotlinLogging
+import pt.isel.pc.nio.acceptSuspend
+import pt.isel.pc.nio.readLine
+import pt.isel.pc.nio.writeLine
 import java.net.InetSocketAddress
-import java.net.http.HttpClient
 import java.nio.channels.AsynchronousServerSocketChannel
 import java.nio.channels.AsynchronousSocketChannel
 import kotlin.coroutines.Continuation
@@ -55,7 +57,7 @@ class EchoServerCR(private val port : Int) {
         socket.close()
     }
     
-    private suspend fun launchClient(clientChannel : AsynchronousSocketChannel, clientId:Int) {
+    private fun launchClient(clientChannel : AsynchronousSocketChannel, clientId:Int) {
         val completion = Continuation<Unit>(EmptyCoroutineContext) {}
         suspend {
             logger.info("client ${clientChannel.remoteAddress} connected")

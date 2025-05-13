@@ -1,7 +1,5 @@
 plugins {
     kotlin("jvm") version "2.1.10"
-    application
-    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "pt.isel.pc"
@@ -11,10 +9,6 @@ repositories {
     mavenCentral()
 }
 
-application {
-    mainClass.set("pt.isel.pc.nio.CopyFileSMKt")
-    // "Kt" no fim porque é Kotlin
-}
 
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
@@ -27,6 +21,7 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
     jvmToolchain(21)
 }

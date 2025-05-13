@@ -4,10 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f162eeb9-3685-435e-8495-ba34b14c2646" name="Changes" comment="">
+    <list default="true" id="4b65d882-6e97-43c7-9310-fbe0b9907c03" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-06-asynchronizers/src/main/kotlin/pt/isel/pc/asynchronizers/SemaphoreCR.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-06-asynchronizers/src/main/kotlin/pt/isel/pc/asynchronizers/SemaphoreCR.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-06-asynchronizers/src/main/kotlin/pt/isel/pc/asynchronizers/SemaphoreCR2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-06-asynchronizers/src/main/kotlin/pt/isel/pc/asynchronizers/SemaphoreCR2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-06-asynchronizers/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-06-asynchronizers/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/CopyFileSM.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/EchoServerCR.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerCR.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/FileUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/FileUtils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerAsync.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerCB.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/http_state_machine.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_bridges.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/nio_bridges.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +34,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
@@ -39,7 +54,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -47,105 +61,177 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;jmartins3&quot;
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "jmartins3"
   }
-}</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/isel-leic-pc/s2425v-leic42d.git&quot;,
-    &quot;accountId&quot;: &quot;84ffe75d-0552-4ba7-bf9a-76fbc15af82d&quot;
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/isel-leic-pc/s2425v-leic42d.git",
+    "accountId": "84ffe75d-0552-4ba7-bf9a-76fbc15af82d"
   }
-}</component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 6
-}</component>
-  <component name="ProjectId" id="2wlMFXlYBVIlDV75NHrJf3eCwEg" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2x2UTUUtmRwUoBxwfypH3Dpy5vL" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build s2425v-leic42d.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.CopyFileSMKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.EchoServerAsyncKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.EchoServerCRKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.FileUtilsKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.Http_state_machineKt.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/home/disciplinas/PC/2s2024-2025/src/s2425v-leic42d/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.12298851&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.CoroutineScopeFunctionTests.error on coroutine scope.executor": "Run",
+    "Gradle.GeneralTests.simpleAssert.executor": "Run",
+    "Gradle.ScopeTests.first scope test.executor": "Run",
+    "Gradle.SimpleRunBlockingTests.first runBlocking builder test.executor": "Run",
+    "Gradle.SimpleRunBlockingTests.runBlocking job error on child.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-05-07-asyncio-nio\src\main\kotlin\pt\isel\pc\nio" />
-    </key>
-    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
-      <recent name="pt.isel.pc.nio.echo_servers" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Kotlin.EchoServerCRKt">
-    <configuration name="CopyFileSMKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.nio.CopyFileSMKt" />
-      <module name="s2425v-leic42d.lecture-05-07-asyncio-nio.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+}]]></component>
+  <component name="RunManager" selected="Gradle.SimpleRunBlockingTests.runBlocking job error on child">
+    <configuration name="CoroutineScopeFunctionTests.error on coroutine scope" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lecture-05-07-09-nio-coroutinesx:test" />
+            <option value="--tests" />
+            <option value="&quot;pt.isel.pc.coroutinesx.CoroutineScopeFunctionTests.error on coroutine scope&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
-    <configuration name="EchoServerAsyncKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.nio.echo_servers.EchoServerAsyncKt" />
-      <module name="s2425v-leic42d.lecture-05-07-asyncio-nio.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="GeneralTests.simpleAssert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lecture-05-07-09-nio-coroutinesx:test" />
+            <option value="--tests" />
+            <option value="&quot;pt.isel.pc.coroutinesx.GeneralTests.simpleAssert&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
-    <configuration name="EchoServerCRKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.nio.EchoServerCRKt" />
-      <module name="s2425v-leic42d.lecture-05-07-asyncio-nio.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="ScopeTests.first scope test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lecture-05-07-09-nio-coroutinesx:test" />
+            <option value="--tests" />
+            <option value="&quot;pt.isel.pc.coroutinesx.ScopeTests.first scope test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
-    <configuration name="FileUtilsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.nio.FileUtilsKt" />
-      <module name="s2425v-leic42d.lecture-05-07-asyncio-nio.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="SimpleRunBlockingTests.first runBlocking builder test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lecture-05-07-09-nio-coroutinesx:test" />
+            <option value="--tests" />
+            <option value="&quot;pt.isel.pc.coroutinesx.SimpleRunBlockingTests.first runBlocking builder test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
-    <configuration name="Http_state_machineKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pt.isel.pc.nio.Http_state_machineKt" />
-      <module name="s2425v-leic42d.lecture-05-07-asyncio-nio.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="SimpleRunBlockingTests.runBlocking job error on child" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":lecture-05-07-09-nio-coroutinesx:test" />
+            <option value="--tests" />
+            <option value="&quot;pt.isel.pc.coroutinesx.SimpleRunBlockingTests.runBlocking job error on child&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.EchoServerCRKt" />
-        <item itemvalue="Kotlin.Http_state_machineKt" />
-        <item itemvalue="Kotlin.CopyFileSMKt" />
-        <item itemvalue="Kotlin.EchoServerAsyncKt" />
-        <item itemvalue="Kotlin.FileUtilsKt" />
+        <item itemvalue="Gradle.SimpleRunBlockingTests.runBlocking job error on child" />
+        <item itemvalue="Gradle.CoroutineScopeFunctionTests.error on coroutine scope" />
+        <item itemvalue="Gradle.ScopeTests.first scope test" />
+        <item itemvalue="Gradle.SimpleRunBlockingTests.first runBlocking builder test" />
+        <item itemvalue="Gradle.GeneralTests.simpleAssert" />
       </list>
     </recent_temporary>
   </component>
@@ -159,53 +245,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f162eeb9-3685-435e-8495-ba34b14c2646" name="Changes" comment="" />
-      <created>1746611604665</created>
+      <changelist id="4b65d882-6e97-43c7-9310-fbe0b9907c03" name="Changes" comment="" />
+      <created>1747135669931</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1746611604665</updated>
-      <workItem from="1746611605890" duration="5792000" />
-      <workItem from="1746629626263" duration="3335000" />
-      <workItem from="1746634258357" duration="81000" />
+      <updated>1747135669931</updated>
+      <workItem from="1747135671273" duration="5190000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt</url>
-          <line>31</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt</url>
-          <line>35</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt</url>
-          <line>21</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt</url>
-          <line>25</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="kotlin-function">
-          <url>file://$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt</url>
-          <line>66</line>
-          <properties method="readLine">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

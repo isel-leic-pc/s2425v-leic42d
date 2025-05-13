@@ -5,10 +5,13 @@
  * For more detailed information on multi-project builds, please refer to https://docs.gradle.org/8.5/userguide/building_swift_projects.html in the Gradle documentation.
  */
 
+ 
 plugins {
     // Apply the foojay-resolver plugin to allow automatic download of JDKs
     id("org.gradle.toolchains.foojay-resolver-convention") version "0.7.0"
+    
 }
+
 
 rootProject.name = "s2425v-leic42d"
 include("lecture-02-18-threds-intro")
@@ -31,4 +34,4 @@ include("lecture-04-15-coroutines-core")
 
 include("lecture-04-29-more-about-coroutines")
 include("lecture-05-06-asynchronizers")
-include("lecture-05-07-asyncio-nio")
+include("lecture-05-07-09-nio-coroutinesx")

@@ -2,7 +2,6 @@ package pt.isel.pc.nio
 
 import mu.KotlinLogging
 import pt.isel.pc.nio.FileUtils.Companion.safeClose
-import java.io.IOError
 import java.nio.ByteBuffer
 import java.nio.channels.AsynchronousFileChannel
 import java.nio.channels.CompletionHandler
@@ -12,12 +11,12 @@ import java.util.concurrent.CountDownLatch
 
 private val logger = KotlinLogging.logger {}
 
-class CopyFileSM(val pathSrc: String, val pathDst: String) {
+class CopyFileAsyncSM(val pathSrc: String, val pathDst: String) {
     val BUFFER_SIZE = 1
     lateinit var  buffer: ByteBuffer
     lateinit var  inputFile : AsynchronousFileChannel
     lateinit var  outputFile : AsynchronousFileChannel
-    lateinit var cont : IOContinuation<Long>
+    lateinit var completion : CompletionHandler<Long, Void?>
     var pos = 0L
     
     sealed interface State {
@@ -62,7 +61,7 @@ class CopyFileSM(val pathSrc: String, val pathDst: String) {
     private fun blockRead(bytesRead: Int) : State {
         if (bytesRead == -1) {
             logger.info("done")
-            cont(null, pos)
+            completion.completed(pos, null)
             return State.Done
         }
         buffer.flip()
@@ -86,7 +85,7 @@ class CopyFileSM(val pathSrc: String, val pathDst: String) {
     
     private fun writtenBlock(writtenBytes: Int) : State{
         pos += writtenBytes
-        if (buffer.position() + writtenBytes == buffer.limit()) {
+        if (buffer.position() == buffer.limit()) {
             buffer.clear()
             return State.ReadBlock
         }
@@ -98,7 +97,7 @@ class CopyFileSM(val pathSrc: String, val pathDst: String) {
     private fun failure(error: Throwable) : State {
         safeClose(inputFile)
         safeClose(outputFile)
-        cont(error, -1L)
+        completion.failed(error, null)
         return State.Done
     }
     
@@ -125,27 +124,35 @@ class CopyFileSM(val pathSrc: String, val pathDst: String) {
                 if (nextState !is  State.Failure) {
                     state = failure(e)
                 } else {
-                    cont(e, -1L)
+                    completion.failed(e, null)
                     break
                 }
             }
         }
     }
     
-    fun run(cont: IOContinuation<Long>) {
-        this.cont = cont
+    fun run(completion: CompletionHandler<Long, Void?>) {
+        this.completion = completion
         run(State.Start)
     }
 }
 
 fun main() {
     val cdl = CountDownLatch(1)
-    val cf = CopyFileSM("dud_en.txt", "dud_en_out.txt")
-    cf.run {
-        err,result ->
-        logger.info("file copied with size $result")
-        cdl.countDown()
+    val completion = object: CompletionHandler<Long, Void? > {
+        override fun completed(result: Long, attach: Void?) {
+            logger.info("file copied with size $result")
+            cdl.countDown()
+            
+        }
+        
+        override fun failed(exc: Throwable, attach: Void?) {
+            logger.info("error $exc copying file")
+            cdl.countDown()
+        }
     }
+    val cf = CopyFileAsyncSM("dud_en.txt", "dud_en_out.txt")
+    cf.run(completion)
     
     cdl.await()
     logger.info("done")

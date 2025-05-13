@@ -7,9 +7,7 @@ import pt.isel.pc.nio.write
 import java.io.BufferedWriter
 import java.io.IOException
 import java.net.InetSocketAddress
-import java.nio.channels.AsynchronousChannelGroup
 import java.nio.channels.AsynchronousServerSocketChannel
-import java.util.concurrent.Executors
 
 import java.nio.ByteBuffer
 import java.nio.channels.AsynchronousSocketChannel
@@ -17,7 +15,7 @@ import kotlin.apply
 import kotlin.jvm.javaClass
 
 
-class EchoServerAsync(private val port: Int) {
+class EchoServerCB(private val port: Int) {
     private val logger = KotlinLogging.logger {}
 
     private val BUF_SIZE  = 1024
@@ -46,8 +44,8 @@ class EchoServerAsync(private val port: Int) {
      */
     fun run() {
 
-        val group = AsynchronousChannelGroup.withThreadPool(Executors.newSingleThreadExecutor())
-        val servSocket = AsynchronousServerSocketChannel.open(group)
+        //val group = AsynchronousChannelGroup.withThreadPool(Executors.newSingleThreadExecutor())
+        val servSocket = AsynchronousServerSocketChannel.open()
         println("provider: ${servSocket.provider().javaClass.name}")
         servSocket.bind(InetSocketAddress("0.0.0.0", port))
         var clientId = 1
@@ -131,7 +129,7 @@ class EchoServerAsync(private val port: Int) {
 }
 
 private fun main() {
-    val server = EchoServerAsync(8080)
+    val server = EchoServerCB(8080)
     server.run()
     println("press return to terminate...")
     readln()
