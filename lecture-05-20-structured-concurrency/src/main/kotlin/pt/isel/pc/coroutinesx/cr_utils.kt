@@ -1,4 +1,4 @@
-package pt.isel.pc.nio.coroutinesx
+package pt.isel.pc.coroutinesx
 
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.Job

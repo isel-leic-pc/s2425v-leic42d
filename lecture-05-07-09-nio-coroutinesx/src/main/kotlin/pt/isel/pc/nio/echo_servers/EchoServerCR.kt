@@ -10,8 +10,10 @@ import pt.isel.pc.nio.acceptSuspend
 import pt.isel.pc.nio.readLine
 import pt.isel.pc.nio.writeLine
 import java.net.InetSocketAddress
+import java.nio.channels.AsynchronousChannelGroup
 import java.nio.channels.AsynchronousServerSocketChannel
 import java.nio.channels.AsynchronousSocketChannel
+import java.util.concurrent.Executors
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.EmptyCoroutineContext
 import kotlin.coroutines.startCoroutine
@@ -19,8 +21,10 @@ import kotlin.coroutines.startCoroutine
 private val logger = KotlinLogging.logger {}
 
 class EchoServerCR(private val port : Int) {
-   
-    val serverSocketChannel = AsynchronousServerSocketChannel.open()
+    val group = AsynchronousChannelGroup
+        .withThreadPool(Executors.newSingleThreadExecutor())
+    
+    val serverSocketChannel = AsynchronousServerSocketChannel.open(group)
  
     /**
      * The server start launching the acceptLoop coroutine
@@ -43,13 +47,15 @@ class EchoServerCR(private val port : Int) {
      * The client session processing loop
      */
     suspend fun processClient(socket: AsynchronousSocketChannel, clientId: Int ) {
+        logger.info("new session from ${socket.remoteAddress}")
         socket.writeLine("Hello, client $clientId")
         do {
          
             val line = socket.readLine()
-            
+            logger.info("new line from client $clientId")
             if (line == null || line.equals("exit")) {
                 socket.writeLine("Bye")
+                logger.info("terminate session from ${socket.remoteAddress}")
                 break;
             }
             socket.writeLine(line)
@@ -82,9 +88,6 @@ class EchoServerCR(private val port : Int) {
             launchClient(clientChannel, clientId)
         }
     }
-
-  
-    
 }
 
 private fun main() {
@@ -93,5 +96,4 @@ private fun main() {
 
     println("Press enter to shutdown...")
     readln()
-    
 }

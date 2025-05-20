@@ -5,20 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4b65d882-6e97-43c7-9310-fbe0b9907c03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-06-asynchronizers/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-06-asynchronizers/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/CopyFileSM.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/EchoServerCR.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerCR.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/FileUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/FileUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerAsync.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerCB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/http_state_machine.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_bridges.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/nio_bridges.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lecture-05-07-asyncio-nio/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/coroutinesx/cr_utils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/coroutinesx/cr_utils.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerCB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerCB.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerCR.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerCR.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/nio_bridges.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/nio_bridges.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/nio_cr_bridges.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/test/kotlin/pt/isel/pc/coroutinesx/CoroutineScopeFunctionTests.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/test/kotlin/pt/isel/pc/coroutinesx/ScopeTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/test/kotlin/pt/isel/pc/coroutinesx/ScopeTests.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/test/kotlin/pt/isel/pc/coroutinesx/SimpleRunBlockingTests.kt" beforeDir="false" afterPath="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/test/kotlin/pt/isel/pc/coroutinesx/SimpleRunBlockingTests.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,37 +58,53 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "jmartins3"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;jmartins3&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/isel-leic-pc/s2425v-leic42d.git",
-    "accountId": "84ffe75d-0552-4ba7-bf9a-76fbc15af82d"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/isel-leic-pc/s2425v-leic42d.git&quot;,
+    &quot;accountId&quot;: &quot;84ffe75d-0552-4ba7-bf9a-76fbc15af82d&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2x2UTUUtmRwUoBxwfypH3Dpy5vL" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.Build s2425v-leic42d.executor": "Run",
+    "Gradle.CancellableSuspensionsTests.effect of cancellable suspend  on job cancellation.executor": "Run",
+    "Gradle.CancellableSuspensionsTests.effect of normal suspend (non cancellable) on job cancellation.executor": "Run",
     "Gradle.CoroutineScopeFunctionTests.error on coroutine scope.executor": "Run",
     "Gradle.GeneralTests.simpleAssert.executor": "Run",
+    "Gradle.ScopeTests.cancel job on scope using completable job test.executor": "Run",
     "Gradle.ScopeTests.first scope test.executor": "Run",
+    "Gradle.ScopeTests.first scope using completable job test.executor": "Run",
+    "Gradle.ScopeTests.throw exception on job using supervisor job test.executor": "Run",
     "Gradle.SimpleRunBlockingTests.first runBlocking builder test.executor": "Run",
+    "Gradle.SimpleRunBlockingTests.multiple child coroutines on runBlocking.executor": "Run",
+    "Gradle.SimpleRunBlockingTests.runBlocking cancelling child job.executor": "Run",
     "Gradle.SimpleRunBlockingTests.runBlocking job error on child.executor": "Run",
+    "Kotlin.CopyFileAsyncSMKt.executor": "Run",
+    "Kotlin.EchoServerCBKt.executor": "Debug",
+    "Kotlin.EchoServerCRKt.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/home/disciplinas/PC/2s2024-2025/src/s2425v-leic42d/lecture-05-20-structured-concurrency/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -104,8 +117,18 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.SimpleRunBlockingTests.runBlocking job error on child">
-    <configuration name="CoroutineScopeFunctionTests.error on coroutine scope" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-05-20-structured-concurrency\src\main\resources" />
+      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-05-20-structured-concurrency\src\main\kotlin\pt\isel\pc\coroutinesx" />
+      <recent name="C:\home\disciplinas\PC\2s2024-2025\src\s2425v-leic42d\lecture-05-07-09-nio-coroutinesx\src\test\resources" />
+    </key>
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="pt.isel.pc.coroutinesx" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.ScopeTests.first scope using completable job test">
+    <configuration name="CancellableSuspensionsTests.effect of cancellable suspend  on job cancellation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -116,9 +139,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":lecture-05-07-09-nio-coroutinesx:test" />
+            <option value=":lecture-05-20-structured-concurrency:test" />
             <option value="--tests" />
-            <option value="&quot;pt.isel.pc.coroutinesx.CoroutineScopeFunctionTests.error on coroutine scope&quot;" />
+            <option value="&quot;pt.isel.pc.coroutinesx.CancellableSuspensionsTests.effect of cancellable suspend  on job cancellation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -129,7 +152,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="GeneralTests.simpleAssert" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CancellableSuspensionsTests.effect of normal suspend (non cancellable) on job cancellation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -140,9 +163,9 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value=":lecture-05-07-09-nio-coroutinesx:test" />
+            <option value=":lecture-05-20-structured-concurrency:test" />
             <option value="--tests" />
-            <option value="&quot;pt.isel.pc.coroutinesx.GeneralTests.simpleAssert&quot;" />
+            <option value="&quot;pt.isel.pc.coroutinesx.CancellableSuspensionsTests.effect of normal suspend (non cancellable) on job cancellation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -153,7 +176,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ScopeTests.first scope test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ScopeTests.cancel job on scope using completable job test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -166,7 +189,7 @@
           <list>
             <option value=":lecture-05-07-09-nio-coroutinesx:test" />
             <option value="--tests" />
-            <option value="&quot;pt.isel.pc.coroutinesx.ScopeTests.first scope test&quot;" />
+            <option value="&quot;pt.isel.pc.coroutinesx.ScopeTests.cancel job on scope using completable job test&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -177,7 +200,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SimpleRunBlockingTests.first runBlocking builder test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ScopeTests.first scope using completable job test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -190,7 +213,7 @@
           <list>
             <option value=":lecture-05-07-09-nio-coroutinesx:test" />
             <option value="--tests" />
-            <option value="&quot;pt.isel.pc.coroutinesx.SimpleRunBlockingTests.first runBlocking builder test&quot;" />
+            <option value="&quot;pt.isel.pc.coroutinesx.ScopeTests.first scope using completable job test&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -201,7 +224,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SimpleRunBlockingTests.runBlocking job error on child" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ScopeTests.throw exception on job using supervisor job test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -214,7 +237,7 @@
           <list>
             <option value=":lecture-05-07-09-nio-coroutinesx:test" />
             <option value="--tests" />
-            <option value="&quot;pt.isel.pc.coroutinesx.SimpleRunBlockingTests.runBlocking job error on child&quot;" />
+            <option value="&quot;pt.isel.pc.coroutinesx.ScopeTests.throw exception on job using supervisor job test&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -223,15 +246,26 @@
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="kotlin.scripts.KotlinBuildScript.lab1\build.gradle.kts" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="kotlin.scripts.KotlinBuildScript.lab1\build.gradle.kts" />
+      <option name="filePath" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SimpleRunBlockingTests.runBlocking job error on child" />
-        <item itemvalue="Gradle.CoroutineScopeFunctionTests.error on coroutine scope" />
-        <item itemvalue="Gradle.ScopeTests.first scope test" />
-        <item itemvalue="Gradle.SimpleRunBlockingTests.first runBlocking builder test" />
-        <item itemvalue="Gradle.GeneralTests.simpleAssert" />
+        <item itemvalue="Gradle.ScopeTests.first scope using completable job test" />
+        <item itemvalue="Gradle.ScopeTests.cancel job on scope using completable job test" />
+        <item itemvalue="Gradle.ScopeTests.throw exception on job using supervisor job test" />
+        <item itemvalue="Gradle.CancellableSuspensionsTests.effect of normal suspend (non cancellable) on job cancellation" />
+        <item itemvalue="Gradle.CancellableSuspensionsTests.effect of cancellable suspend  on job cancellation" />
       </list>
     </recent_temporary>
   </component>
@@ -251,10 +285,38 @@
       <option name="presentableId" value="Default" />
       <updated>1747135669931</updated>
       <workItem from="1747135671273" duration="5190000" />
+      <workItem from="1747145085665" duration="24000" />
+      <workItem from="1747145204057" duration="66000" />
+      <workItem from="1747147449547" duration="9685000" />
+      <workItem from="1747160650434" duration="1324000" />
+      <workItem from="1747208991839" duration="600000" />
+      <workItem from="1747219359711" duration="3506000" />
+      <workItem from="1747236133493" duration="6892000" />
+      <workItem from="1747294259407" duration="1029000" />
+      <workItem from="1747323130692" duration="27000" />
+      <workItem from="1747396716285" duration="1539000" />
+      <workItem from="1747469857476" duration="14000" />
+      <workItem from="1747731007375" duration="4941000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerCR.kt</url>
+          <line>93</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx/src/main/kotlin/pt/isel/pc/nio/echo_servers/EchoServerCR.kt</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

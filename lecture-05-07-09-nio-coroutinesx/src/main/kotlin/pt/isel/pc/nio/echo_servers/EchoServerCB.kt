@@ -90,7 +90,7 @@ class EchoServerCB(private val port: Int) {
             putBuffer(byeMsg)
             client.write(buffer) { err, res ->
                 buffer.clear()
-                client.shutdownOutput()
+                client.shutdownInput()
                 Thread.sleep(1000)
                 logger.info("terminate client")
                 client.close()
@@ -99,7 +99,7 @@ class EchoServerCB(private val port: Int) {
 
         fun clientLoop() {
             client.read(buffer) { err, nBytes ->
-                if (err != null || nBytes <= 0 ) {
+                if (err != null || nBytes < 0 ) {
                     closeConnection(client)
                 } else {
                     logger.info("$nBytes received from ${client.remoteAddress}")

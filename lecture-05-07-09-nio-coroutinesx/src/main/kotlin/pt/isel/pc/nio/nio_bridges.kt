@@ -27,7 +27,7 @@ val rwFileCompletion = object: CompletionHandler<Int, IOContinuation<Int>> {
     }
     
     override fun failed(exc: Throwable?, cont: IOContinuation<Int>) {
-        cont(exc, EOF)
+        cont(exc, IO_ERROR)
     }
 }
 
@@ -40,6 +40,7 @@ fun AsynchronousFileChannel.write(buffer: ByteBuffer, pos: Long, cont: IOContinu
     write(buffer,pos, cont, rwFileCompletion)
 }
 
+// server and client sockets
 private object acceptCompleted : CompletionHandler<AsynchronousSocketChannel?,
                                         IOContinuation<AsynchronousSocketChannel?>> {
     override fun completed(result: AsynchronousSocketChannel?,

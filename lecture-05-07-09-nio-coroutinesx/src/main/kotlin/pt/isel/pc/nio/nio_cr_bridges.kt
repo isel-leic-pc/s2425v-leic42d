@@ -3,29 +3,27 @@ package pt.isel.pc.nio
 import java.nio.ByteBuffer
 import java.nio.channels.AsynchronousServerSocketChannel
 import java.nio.channels.AsynchronousSocketChannel
-import java.nio.channels.CompletionHandler
 import java.nio.charset.Charset
-import kotlin.coroutines.Continuation
-import kotlin.coroutines.resume
-import kotlin.coroutines.resumeWithException
-import kotlin.coroutines.suspendCoroutine
+
 
 private val charSet = Charset.defaultCharset()
 private val decoder = charSet.newDecoder()
 
+
+
 suspend fun AsynchronousServerSocketChannel.acceptSuspend()
         : AsynchronousSocketChannel {
-    TODO("to be implemented by students")
+   TODO("to implement by students")
 }
 
 suspend fun AsynchronousSocketChannel.readSuspend (
     dst: ByteBuffer) : Int {
-    TODO("to be implemented by students")
+    TODO("to implement by students")
 }
 
 suspend fun AsynchronousSocketChannel.writeSuspend (
     dst: ByteBuffer) : Int {
-    TODO("to be implemented by students")
+    TODO("to implement by students")
 }
 
 private val CR = 13.toByte()

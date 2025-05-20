@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="s2425v-leic42d.lecture-05-20-coroutinesx-structured-concurrency" target="21" />
+      <module name="s2425v-leic42d.lecture-05-20-coroutinesx-structured-concurrency.main" target="21" />
+      <module name="s2425v-leic42d.lecture-05-20-coroutinesx-structured-concurrency.test" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
