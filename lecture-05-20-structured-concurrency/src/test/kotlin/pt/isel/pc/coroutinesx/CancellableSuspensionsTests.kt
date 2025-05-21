@@ -40,7 +40,7 @@ class CancellableSuspensionsTests {
             logger.info("after cancellation")
         }
         
-        scope.launch {
+        val job2 = scope.launch {
             logger.info("start job2")
             showContext()
             delay(3000)
@@ -52,9 +52,17 @@ class CancellableSuspensionsTests {
             job1.cancel()
             logger.info("${job1.parent}")
             parentJob.complete()
-            withTimeout(4.seconds) {
-                parentJob.join()
+            try {
+                withTimeout(4.seconds) {
+                    parentJob.join()
+                }
             }
+            catch(e: CancellationException) {
+            
+            }
+            logger.info("job1 state on end: ${getJobState(job1)}")
+            logger.info("job2 state on end: ${getJobState(job2)}")
+            logger.info("parent state on end: ${getJobState(parentJob)}")
         }
     }
     
@@ -80,7 +88,7 @@ class CancellableSuspensionsTests {
             logger.info("after cancellation")
         }
         
-        scope.launch {
+        val job2 = scope.launch {
             logger.info("start job2")
             showContext()
             delay(3000)
@@ -95,6 +103,10 @@ class CancellableSuspensionsTests {
             withTimeout(4.seconds) {
                 parentJob.join()
             }
+            logger.info("job1 state on end: ${getJobState(job1)}")
+            logger.info("job2 state on end: ${getJobState(job2)}")
+            logger.info("parent state on end: ${getJobState(parentJob)}")
+            
             logger.info("${getJobState(job1)}")
         }
     }

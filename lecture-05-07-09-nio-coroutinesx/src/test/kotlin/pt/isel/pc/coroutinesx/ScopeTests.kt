@@ -41,7 +41,7 @@ class ScopeTests {
             
         }
         
-        scope.launch {
+        val job2 = scope.launch {
             logger.info("start job2")
             showContext()
             delay(3000)
@@ -53,6 +53,9 @@ class ScopeTests {
             logger.info("${job1.parent}")
             parentJob.complete()
             parentJob.join()
+            logger.info("job1 state on end: ${getJobState(job1)}")
+            logger.info("job2 state on end: ${getJobState(job2)}")
+            logger.info("parent state on end: ${getJobState(parentJob)}")
             logger.info("scope terminated")
         }
         logger.info("test done")
@@ -71,7 +74,7 @@ class ScopeTests {
           
         }
         
-        scope.launch {
+        val job2 = scope.launch {
             logger.info("start job2")
             showContext()
             delay(3000)
@@ -85,6 +88,8 @@ class ScopeTests {
             parentJob.complete()
             parentJob.join()
             logger.info("job1 state on end: ${getJobState(job1)}")
+            logger.info("job2 state on end: ${getJobState(job2)}")
+            logger.info("parent state on end: ${getJobState(parentJob)}")
         }
         
     }
@@ -93,7 +98,12 @@ class ScopeTests {
     @Test
     fun `throw exception on job using completable job test`() {
         val parentJob = Job()
-        val scope = CoroutineScope(parentJob)
+        val excHandler = CoroutineExceptionHandler {
+                ctx, err ->
+            logger.info("in error $err context:")
+            showContext(ctx)
+        }
+        val scope = CoroutineScope(parentJob + excHandler)
         
         val job1 = scope.launch {
             logger.info("start job1")
@@ -103,7 +113,7 @@ class ScopeTests {
             throw Error("fatal error on job1")
         }
         
-        scope.launch {
+        val job2 = scope.launch {
             logger.info("start job2")
             showContext()
             delay(3000)
@@ -112,11 +122,15 @@ class ScopeTests {
         
         runBlocking {
             delay(100)
-            job1.cancel()
             logger.info("${job1.parent}")
             parentJob.complete()
             parentJob.join()
+            logger.info("job1 state on end: ${getJobState(job1)}")
+            logger.info("job2 state on end: ${getJobState(job2)}")
+            logger.info("parent state on end: ${getJobState(parentJob)}")
+            
         }
+        logger.info("test done")
         
     }
     
@@ -137,7 +151,7 @@ class ScopeTests {
             throw Error("fatal error on job1")
         }
         
-        scope.launch {
+        val job2 = scope.launch {
             logger.info("start job2")
             showContext()
             delay(3000)
@@ -149,6 +163,9 @@ class ScopeTests {
             logger.info("${job1.parent}")
             parentJob.complete()
             parentJob.join()
+            logger.info("job1 state on end: ${getJobState(job1)}")
+            logger.info("job2 state on end: ${getJobState(job2)}")
+            logger.info("parent state on end: ${getJobState(parentJob)}")
         }
         
         logger.info("test done")
