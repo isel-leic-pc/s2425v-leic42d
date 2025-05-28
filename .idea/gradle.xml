@@ -30,6 +30,7 @@
             <option value="$PROJECT_DIR$/lecture-05-06-asynchronizers" />
             <option value="$PROJECT_DIR$/lecture-05-07-09-nio-coroutinesx" />
             <option value="$PROJECT_DIR$/lecture-05-20-structured-concurrency" />
+            <option value="$PROJECT_DIR$/lecture-05-27-flows" />
           </set>
         </option>
       </GradleProjectSettings>

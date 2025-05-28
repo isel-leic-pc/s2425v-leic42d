@@ -37,3 +37,4 @@ include("lecture-05-06-asynchronizers")
 include("lecture-05-07-09-nio-coroutinesx")
 
 include("lecture-05-20-structured-concurrency")
+include("lecture-05-27-flows")
